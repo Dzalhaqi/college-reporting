@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+select {
+  appearance: none;
+  /* Remove the default arrow in WebKit browsers */
+  -webkit-appearance: none;
+  /* Remove the default arrow in WebKit browsers */
+  -moz-appearance: none;
+  /* Remove the default arrow in Firefox */
+}
+
+div.aspect-mark-container::after {
+  content: "▼";
+  font-size: 0.5rem;
+  top: 35%;
+  right: 10px;
+  position: absolute;
 }
